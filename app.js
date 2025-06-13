@@ -36,7 +36,7 @@ function typeEffect() {
     let delay = isDeleting ? 50 : 100;
 
     if (!isDeleting && charIndex === currentWord.length) {
-        delay = 1000;
+        delay = 2000;
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
@@ -49,19 +49,19 @@ function typeEffect() {
 
 typeEffect();
 
-  function handleSideBar() {
+function handleSideBar() {
     const sidebar = document.getElementById("sideNavBar");
 
     if (window.innerWidth < 768) {
-      // Show it if hidden
-      sidebar.classList.remove("hidden");
-      // Toggle animation
-      if (sidebar.classList.contains("-translate-x-full")) {
-        sidebar.classList.remove("-translate-x-full");
-        sidebar.classList.add("translate-x-0");
-      } else {
-        sidebar.classList.add("-translate-x-full");
-        sidebar.classList.remove("translate-x-0");
-      }
+        //   Show it if hidden
+        sidebar.classList.remove("hidden");
+        //   Toggle animation
+        if (sidebar.classList.contains("-translate-x-full")) {
+            sidebar.classList.remove("-translate-x-full");
+            sidebar.classList.add("translate-x-0");
+        } else {
+            sidebar.classList.add("-translate-x-full");
+            sidebar.classList.remove("translate-x-0");
+        }
     }
-  }
+}
