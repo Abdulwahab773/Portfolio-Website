@@ -20,8 +20,7 @@
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-[#0F172A] dark:text-white min-h-screen overflow-x-hidden">
-    <!-- Theme Toggle -->
-    <!-- <div class="fixed top-4 right-4 z-50">
+    <div class="fixed top-4 right-4 z-50">
         <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" value="" class="sr-only peer"
                 onclick="document.documentElement.classList.toggle('dark')">
@@ -29,9 +28,8 @@
                 class="w-11 h-6 bg-gray-300  rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-700">
             </div>
         </label>
-    </div> -->
+    </div>
 
-    <!-- Mobile Toggle Button -->
     <div class="h-14 w-full bg-cyan-600 justify-between items-center hidden max-md:flex fixed z-50 ">
         <h1 class="text-lg font-semibold text-white ml-2 cursor-pointer">Abdul Wahab</h1>
         <button onclick="handleSideBar()">
@@ -39,7 +37,6 @@
         </button>
     </div>
 
-    <!-- Sidebar -->
     <nav id="sideNavBar"
         class="fixed top-0 left-0 h-full w-24 bg-gray-100 dark:bg-[#1E293B] shadow-lg flex-col items-center z-40 transition-all duration-300 ease-in-out transform -translate-x-full md:translate-x-0 md:flex hidden">
         <div class="w-full h-12 bg-cyan-600 dark:bg-inherit">
@@ -52,33 +49,42 @@
                 <span class="text-2xl">🏠</span>
                 <span class="text-base">Home</span>
             </a>
-            <li
+            <a href="#about"
                 class="flex flex-col items-center border-b border-gray-300 dark:border-gray-600 pb-2 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer">
                 <span class="text-2xl">👤</span>
                 <span class="text-base">About</span>
-            </li>
-            <li
+            </a>
+            <a href="#services"
                 class="flex flex-col items-center border-b border-gray-300 dark:border-gray-600 pb-2 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer">
                 <span class="text-2xl">🛠️</span>
                 <span class="text-base">Services</span>
-            </li>
-            <li
+            </a>
+            <a href="#projects"
                 class="flex flex-col items-center border-b border-gray-300 dark:border-gray-600 pb-2 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer">
                 <span class="text-2xl">📁</span>
                 <span class="text-base">Projects</span>
-            </li>
-            <li class="flex flex-col items-center hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer">
+            </a>
+            <a href="#contact"
+                class="flex flex-col items-center border-b border-gray-300 dark:border-gray-600 pb-2 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer">
                 <span class="text-2xl">📞</span>
                 <span class="text-base">Contact</span>
+            </a>
+            <li
+                class="flex flex-col items-center hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer md:hidden">
+                <div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" value="" class="sr-only peer"
+                            onclick="document.documentElement.classList.toggle('dark')">
+                        <div
+                            class="w-11 h-6 bg-gray-300  rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-700">
+                        </div>
+                    </label>
+                </div>
+                <span class="text-base">Theme</span>
             </li>
         </ul>
     </nav>
 
-
-
-
-
-    <!-- Hero Section -->
     <section class="flex items-center justify-center px-4 py-20 min-h-screen bg-[#FFFAFA ] dark:bg-[#0F172A]">
         <div class="text-center animate-fade-in-up space-y-4">
             <h2 class="text-2xl md:text-4xl font-medium text-cyan-600 dark:text-cyan-400">Hello there..👋</h2>
@@ -91,22 +97,22 @@
                 engaging design.
             </p>
 
-            <!-- Social Icons -->
             <div class="flex justify-center space-x-6 mt-6">
-                <a href="#" class="text-[#0077B5] hover:scale-110 transition transform text-3xl" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/abdul-wahab-3a7598283/" target="_blank"
+                    class="text-[#0077B5] hover:scale-110 transition transform text-3xl" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="#" class="text-black hover:scale-110 transition transform text-3xl" title="GitHub">
+                <a href="https://github.com/Abdulwahab773" target="_blank"
+                    class="text-black hover:scale-110 transition transform text-3xl" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:your@email.com" class="text-[#D44638] hover:scale-110 transition transform text-3xl"
-                    title="Gmail">
+                <a href="mailto:abdulwahabyou@gmail.com"
+                    class="text-[#D44638] hover:scale-110 transition transform text-3xl" title="Gmail">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
 
 
-            <!-- Contact Button -->
             <div class="mt-6">
                 <a href="#contact"
                     class="inline-block px-6 py-3 bg-cyan-600 text-white rounded-full shadow hover:bg-cyan-700 transition duration-300">
@@ -118,7 +124,6 @@
 
 
 
-    <!-- About Section -->
     <section id="about" class="bg-gray-100 dark:bg-gray-800 w-full px-4 py-10">
         <div class="text-center mb-8">
             <h2 class="mb-2 text-4xl font-bold text-gray-800 dark:text-white relative inline-block">
@@ -145,7 +150,7 @@
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-4 mt-6 text-sm">
-                    <!-- Info rows here, same as your code -->
+
                     <div class="flex items-center justify-between border-b border-gray-300 dark:border-gray-600 pb-1">
                         <span class="text-gray-600 dark:text-gray-400">Birthday</span>
                         <span class="text-gray-900 dark:text-white">January 23, 2003</span>
@@ -180,7 +185,6 @@
         </div>
     </section>
 
-    <!-- MY SKILLS SECTION -->
 
     <section id="skills" class="bg-white dark:bg-gray-900 py-16 px-4 md:px-20">
         <div class="text-center mb-8">
@@ -258,7 +262,6 @@
 
 
 
-    <!-- MY SERVICES SECTION -->
     <section class="bg-gray-100 dark:bg-[#0F172A] py-20 px-4 sm:px-8" id="services">
         <div class="max-w-6xl mx-auto">
 
@@ -273,10 +276,8 @@
                     DEVELOPER</p>
             </div>
 
-            <!-- Cards Container -->
             <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:ml-9 md:ml-24">
 
-                <!-- Card 1: React Web Apps -->
                 <div
                     class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 h-64 hover:text-white flex flex-col gap-1 items-center text-center hover:bg-cyan-500 cursor-pointer dark:hover:bg-slate-700 transform hover:-translate-y-2 transition-transform duration-500 ease-in-out hover:scale-105 custom-card">
                     <img src="https://img.icons8.com/?size=256&id=wPohyHO_qO1a&format=png" alt="React Icon"
@@ -288,7 +289,6 @@
                     </p>
                 </div>
 
-                <!-- Card 2: UI/UX Design -->
                 <div
                     class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 h-64 flex flex-col gap-1 items-center text-center cursor-pointer hover:bg-cyan-500 hover:text-white dark:hover:bg-slate-700 transform hover:-translate-y-2 transition-transform duration-500 ease-in-out hover:scale-105 custom-card">
                     <img src="https://img.icons8.com/fluency/48/design.png" alt="Design Icon" class="w-12 h-12 mb-4">
@@ -299,7 +299,6 @@
                     </p>
                 </div>
 
-                <!-- Card 3: Firebase Integration -->
                 <div
                     class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 h-64 flex flex-col gap-1 items-center cursor-pointer text-center hover:bg-cyan-500 hover:text-white dark:hover:bg-slate-700 transform hover:-translate-y-2 transition-transform duration-500 ease-in-out hover:scale-105 custom-card">
                     <img src="https://img.icons8.com/?size=256&id=62452&format=png" alt="Firebase Icon"
@@ -317,10 +316,10 @@
 
 
 
-    <section class="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" class="py-20 bg-white dark:bg-gray-900">
         <div class="text-center mb-8">
             <h2 class="mb-2 text-4xl font-bold text-gray-800 dark:text-white relative inline-block">
-                MY SERVICES
+                MY PROJECTS
                 <span
                     class="absolute left-1/2 -bottom-2 w-28 h-[3px] bg-cyan-500 dark:bg-cyan-400 rounded-full -translate-x-1/2"></span>
             </h2>
@@ -330,22 +329,15 @@
 
         <div
             class="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-6 max-w-7xl md:ml-28 md:mr-5">
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
-
-                <!-- Project Image -->
                 <img src="./images/chat-front.png" alt="Guftugu Chat Web App" class="w-full h-60 object-cover">
-
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Guftugu Chat App</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">A real-time chat application with Firebase
                         integration for instant messaging and authentication.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -356,23 +348,18 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
 
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/w2-front.png" alt="Weather Web App" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Weather Forecast</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">A clean and responsive weather application using
                         modern JavaScript and APIs.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -383,23 +370,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/todo-front.png" alt="TODO App" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Todo Web App</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">A simple and modern ToDo web app with Firebase
                         integration for real-time task management and secure login.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -410,23 +391,37 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
 
-            <!-- Project Card Start -->
+            <div
+                class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
+                <img src="./images/easy expense-front.png" alt="Guftugu Chat Web App" class="w-full h-60 object-cover">
+                <div class="p-4 flex-1 flex flex-col gap-3 text-center">
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">EasyExpense</h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">A smart expense tracking web app that helps users manage and monitor their income & expenses in real-time.</p>
+                </div>
+
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
+                    <div class="flex gap-6 text-white text-4xl">
+                        <a href="#" target="_blank" class="hover:text-cyan-500 transition"><i
+                                class="fas fa-globe"></i></a>
+                        <a href="#" target="_blank" class="hover:text-cyan-500 transition"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/currency-front.png" alt="Currency Convertor" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Currency Convertor</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Currency converter app with live rates, flags,
                         and smooth user experience.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -437,23 +432,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/bookmark-front.png" alt="Bookmark" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Bookmark Manager</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">A stylish bookmark manager to save, organize,
                         and access your favorite links with ease.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -464,23 +453,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/quotes-front.png" alt="Quotes Lab" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Quotes-Lab</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">A quotes web app fetching inspiring quotes via
                         API with a clean and elegant UI.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -491,23 +474,19 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
 
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
-                <img src="./images/profile fetcher-front.png" alt="Github Profile Fetcher" class="w-full h-60 object-cover">
+                <img src="./images/profile fetcher-front.png" alt="Github Profile Fetcher"
+                    class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Github Profile Fetcher</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Fetch and display GitHub user profiles with API
                         integration.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -518,23 +497,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/auto verse-front.png" alt="Auto-Verse" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Auto-Verse</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">A sleek car search app to explore and compare
                         vehicles with dynamic filtering.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -545,23 +518,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/calculator-front.png" alt="Calculator" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Calculator</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">A simple and responsive calculator for basic
                         arithmetic operations with clean design.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -572,23 +539,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/s&t-front.png" alt="Stop Watch & Timer" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Stop Watch & Timer</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">Track time effortlessly with a sleek stopwatch
                         and timer — perfect for workouts, study sessions, and more.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -599,25 +560,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
-
-
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/nasa clone-front.png" alt="Nasa-Clone" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">NASA Landing Page</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">NASA landing page recreated with pixel-perfect
                         design and responsive UI.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -628,24 +581,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
-
-
-            <!-- Project Card Start -->
             <div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
 
-                <!-- Project Image -->
                 <img src="./images/blood-front.png" alt="Blood Donation Checker" class="w-full h-60 object-cover">
 
-                <!-- Project Title & Description -->
                 <div class="p-4 flex-1 flex flex-col gap-4 text-center">
                     <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Blood Donation Checker</h2>
                     <p class="text-gray-600 dark:text-gray-300 text-sm">A blood donation compatibility checker to match
                         donors and recipients based on blood groups.</p>
                 </div>
 
-                <!-- Hover Overlay with Blur -->
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
@@ -656,13 +602,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Project Card End -->
 
         </div>
     </section>
 
 
-    <!-- Get in Touch Section -->
     <section id="contact" class="bg-gray-100 dark:bg-gray-900 py-20 px-6">
 
         <div class="text-center md:ml-24 mb-8">
@@ -675,10 +619,8 @@
                 or just want to say hello? I’d love to hear from you.</p>
         </div>
 
-        <!-- Flex container for Form & Tabs -->
         <div class="max-w-6xl lg:ml-28 flex flex-col md:mx-auto lg:flex-row gap-10 items-start justify-between">
 
-            <!-- Contact Form Container -->
             <div
                 class="bg-white dark:bg-gray-800 w-full lg:w-full md:w-[85%] md:ml-28 lg:ml-0 rounded-lg shadow-2xl p-6 md:p-10">
                 <form class="space-y-6">
@@ -699,7 +641,6 @@
                 </form>
             </div>
 
-            <!-- Contact Info Tabs (Separate, right side) -->
             <div class="flex flex-col gap-6 w-full md:w-[85%] md:ml-28 lg:ml-0">
                 <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-xl flex items-start gap-4">
                     <div class="text-cyan-500 text-3xl">
@@ -725,7 +666,6 @@
     </section>
 
 
-    <!-- Footer -->
     <footer class="bg-gray-800 dark:bg-black text-white px-4 py-6">
         <div
             class="max-w-6xl mx-auto md:ml-[118px] flex flex-col md:flex-row justify-between items-center gap-4 md:gap-18">
@@ -739,9 +679,6 @@
             </div>
         </div>
     </footer>
-
-
-
 
 
     <script src="app.js"></script>
