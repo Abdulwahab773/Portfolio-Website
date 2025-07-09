@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-import { getFirestore, doc, onSnapshot, collection } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js'
+import { getFirestore, doc, onSnapshot, collection, orderBy, query } from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js'
 
 const firebaseConfig = {
     apiKey: "AIzaSyCRTeNC7uMKkzIOvHfLUC205acbFXLpFaI",
@@ -18,5 +18,7 @@ export {
     doc,
     onSnapshot,
     db,
-    collection
+    collection,
+    orderBy,
+    query
 }

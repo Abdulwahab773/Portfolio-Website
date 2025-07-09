@@ -66,7 +66,7 @@ function handleSideBar() {
 
 // _______________________________________________________
 
-import { collection, doc, db, onSnapshot } from "./firebase.js";
+import { collection, doc, db, onSnapshot, orderBy, query } from "./firebase.js";
 
 let projectsContainer = document.getElementById("projectsContainer")
 
@@ -74,10 +74,12 @@ let projectsContainer = document.getElementById("projectsContainer")
 
 const getProjects = async () => {
     let collectionRef = collection(db, "projects");
-    projectsContainer.innerHTML = "";
-    await onSnapshot(collectionRef, (snapshot) => {
-        snapshot.forEach((docs)=>{
+    let dbRef = query(collectionRef, orderBy("timestamp", "desc"))
+    await onSnapshot(dbRef, (snapshot) => {
+        projectsContainer.innerHTML = "";
+        snapshot.forEach((docs) => {
             let data = docs.data();
+
             projectsContainer.innerHTML += `<div
                 class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
                     <img src="${data.imgURL}" alt="${data.title}" class="w-full h-60 object-cover">
@@ -89,15 +91,13 @@ const getProjects = async () => {
                 <div
                     class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
                     <div class="flex gap-6 text-white text-4xl">
-                        <a href="${data.siteLink}" target="_blank" class="hover:text-cyan-500 transition"><i
-                                class="fas fa-globe"></i></a>
-                        <a href="${data.codeLink}" target="_blank" class="hover:text-cyan-500 transition"><i
-                                class="fab fa-github"></i></a>
+                        <a href="${data.siteLink}" target="_blank" class="hover:text-cyan-300 transition"> <i class="fas fa-globe"></i></a>
+                        <a href="${data.codeLink}" target="_blank" class="hover:text-cyan-300 transition"> <i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>`;
         })
-    }) 
+    })
 }
 
 getProjects()
