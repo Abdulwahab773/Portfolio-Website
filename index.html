@@ -20,15 +20,25 @@
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-[#0F172A] dark:text-white min-h-screen overflow-x-hidden">
-    <div class="fixed top-4 right-4 z-50">
-        <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer"
-                onclick="document.documentElement.classList.toggle('dark')">
-            <div
-                class="w-11 h-6 bg-gray-300  rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-700">
-            </div>
-        </label>
-    </div>
+
+    <button id="theme-toggle" onclick="document.documentElement.classList.toggle('dark')"
+        class="hidden md:flex fixed top-4 right-4 z-50 w-12 h-12 items-center justify-center rounded-full bg-white dark:bg-gray-800 text-yellow-500 dark:text-white shadow-lg hover:scale-110 transition-all duration-300"
+        aria-label="Toggle Theme">
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-opacity duration-300"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m0 14v2m9-9h-2M5 12H3
+         m15.364-6.364l-1.414 1.414M7.05 16.95l-1.414 1.414
+         M16.95 16.95l1.414 1.414M7.05 7.05L5.636 5.636
+         M12 8a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 hidden transition-opacity duration-300 text-cyan-500" fill="currentColor"
+            viewBox="0 0 20 20">
+            <path d="M17.293 13.293a8 8 0 01-10.586-10.586A8 8 0 1017.293 13.293z" />
+        </svg>
+    </button>
+
 
     <div class="h-14 w-full bg-cyan-600 justify-between items-center hidden max-md:flex fixed z-50 ">
         <h1 class="text-lg font-semibold text-white ml-2 cursor-pointer">Abdul Wahab</h1>
@@ -69,30 +79,39 @@
                 <span class="text-2xl">📞</span>
                 <span class="text-base">Contact</span>
             </a>
-            <li
-                class="flex flex-col items-center hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer md:hidden">
-                <div>
-                    <label class="relative inline-flex items-center cursor-pointer">
-                        <input type="checkbox" value="" class="sr-only peer"
-                            onclick="document.documentElement.classList.toggle('dark')">
-                        <div
-                            class="w-11 h-6 bg-gray-300  rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-700">
-                        </div>
-                    </label>
-                </div>
-                <span class="text-base">Theme</span>
+
+            <li class="flex flex-col items-center cursor-pointer md:hidden">
+                <button onclick="document.documentElement.classList.toggle('dark')"
+                    class="p-2 rounded-full border-2 border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-all duration-300"
+                    aria-label="Toggle dark mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 block dark:hidden text-yellow-500"
+                        viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block text-cyan-500"
+                        viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                    </svg>
+                </button>
+                <span class="text-base mt-1">Theme</span>
             </li>
+
+
         </ul>
     </nav>
 
-    <section class="flex items-center justify-center px-4 py-20 min-h-screen bg-[#FFFAFA ] dark:bg-[#0F172A]">
+    <section
+        class="flex items-center justify-center px-4 py-20 min-h-screen bg-[#FFFAFA ] dark:bg-[#0F172A] hero-section">
         <div class="text-center animate-fade-in-up space-y-4">
-            <h2 class="text-2xl md:text-4xl font-medium text-cyan-600 dark:text-cyan-400">Hello there..👋</h2>
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">Abdul Wahab</h1>
-            <p class="text-lg md:text-2xl font-semibold text-gray-700 dark:text-gray-300">
+            <h2 class="text-2xl md:text-4xl font-medium text-cyan-600">Hello there..👋</h2>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900">Abdul Wahab</h1>
+            <p class="text-lg md:text-2xl font-semibold text-gray-700">
                 I Am A Passionate <span id="typewriter" class="text-cyan-600"></span>
             </p>
-            <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+            <p class="text-sm md:text-base text-gray-700 max-w-xl mx-auto">
                 I specialize in building clean, elegant, and responsive user interfaces with modern animations and
                 engaging design.
             </p>
@@ -328,8 +347,10 @@
         </div>
 
 
-        <div id="projectsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-6 max-w-7xl md:ml-28 md:mr-5"></div>
-    
+        <div id="projectsContainer"
+            class="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-6 max-w-7xl md:ml-28 md:mr-5">
+        </div>
+
     </section>
 
 

@@ -1,3 +1,4 @@
+let themeToggle = document.getElementById("theme-toggle");
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -65,12 +66,20 @@ function handleSideBar() {
     }
 }
 
-sideBarBtn.addEventListener("click" , handleSideBar)
+function toggleIcon() {
+    const isDark = document.documentElement.classList.contains('dark');
+    document.getElementById('sun-icon').classList.toggle('hidden', isDark);
+    document.getElementById('moon-icon').classList.toggle('hidden', !isDark);
+}
+
+
+themeToggle.addEventListener('click', toggleIcon)
+sideBarBtn.addEventListener("click", handleSideBar);
+
 
 import { collection, doc, db, onSnapshot, orderBy, query } from "./firebase.js";
 
 let projectsContainer = document.getElementById("projectsContainer")
-
 
 
 const getProjects = async () => {
@@ -82,21 +91,40 @@ const getProjects = async () => {
             let data = docs.data();
 
             projectsContainer.innerHTML += `<div
-                class="relative group rounded-xl overflow-hidden shadow-2xl h-[380px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col  transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
-                    <img src="${data.imgURL}" alt="${data.title}" class="w-full h-60 object-cover">
-                <div class="p-4 flex-1 flex flex-col gap-4 text-center">
-                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">${data.title}</h2>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">${data.description}</p>
-                </div>
+  class="relative group rounded-xl overflow-hidden shadow-2xl h-[400px] bg-white dark:bg-gray-900 dark:shadow-cyan-800 dark:shadow-xl flex flex-col transform hover:scale-105 transition-all duration-500 custom-card cursor-pointer">
+  
+  <!-- Image -->
+  <img src="${data.imgURL}" alt="${data.title}" class="w-full h-60 object-cover">
+  
+  <!-- Text Content -->
+  <div class="p-4 flex-1 flex flex-col gap-4 text-center">
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-1">${data.title}</h2>
+    <p class="text-gray-600 dark:text-gray-300 text-sm">${data.description}</p>
+  </div>
 
-                <div
-                    class="absolute inset-0 bg-black bg-opacity-50  opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
-                    <div class="flex gap-6 text-white text-4xl">
-                        <a href="${data.siteLink}" target="_blank" class="hover:text-cyan-300 transition"> <i class="fas fa-globe"></i></a>
-                        <a href="${data.codeLink}" target="_blank" class="hover:text-cyan-300 transition"> <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>`;
+  <!-- Overlay with Animated Icons -->
+  <div
+    class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-500">
+    
+    <div class="flex gap-6 text-white text-4xl">
+      <a
+        href="${data.siteLink}"
+        target="_blank"
+        class="hover:text-cyan-300 transform -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-100"
+      >
+        <i class="fas fa-globe"></i>
+      </a>
+      <a
+        href="${data.codeLink}"
+        target="_blank"
+        class="hover:text-cyan-300 transform -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-200"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    
+     </div>
+  </div>`;
         })
     })
 }

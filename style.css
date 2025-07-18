@@ -2,6 +2,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.hero-section {
+    background-image: url("https://img.freepik.com/free-photo/3d-background-with-white-cubes_23-2150472996.jpg");
+    background-size: cover;
+}
+
 @keyframes fade-in-up {
     0% {
         opacity: 0;
