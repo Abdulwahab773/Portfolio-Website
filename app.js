@@ -49,6 +49,7 @@ function typeEffect() {
 
 typeEffect();
 
+let sideBarBtn = document.getElementById("sideBarBtn");
 function handleSideBar() {
     const sidebar = document.getElementById("sideNavBar");
 
@@ -64,7 +65,7 @@ function handleSideBar() {
     }
 }
 
-// _______________________________________________________
+sideBarBtn.addEventListener("click" , handleSideBar)
 
 import { collection, doc, db, onSnapshot, orderBy, query } from "./firebase.js";
 
