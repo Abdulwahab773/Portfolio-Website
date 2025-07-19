@@ -48,7 +48,6 @@ function typeEffect() {
     setTimeout(typeEffect, delay);
 }
 
-typeEffect();
 
 let sideBarBtn = document.getElementById("sideBarBtn");
 function handleSideBar() {
@@ -79,6 +78,9 @@ sideBarBtn.addEventListener("click", handleSideBar);
 
 import { collection, doc, db, onSnapshot, orderBy, query } from "./firebase.js";
 
+
+let loader = document.getElementById("loader");
+let heroPara = document.getElementById("heroPara");
 let projectsContainer = document.getElementById("projectsContainer")
 
 
@@ -129,4 +131,15 @@ const getProjects = async () => {
     })
 }
 
-getProjects()
+getProjects();
+
+const handelLoader = () => {
+    setTimeout(() => {
+        loader.classList.add("hidden");
+        heroPara.classList.add("animate-fade-in-up")
+        typeEffect();
+    }, 3000);
+}
+
+
+handelLoader()
